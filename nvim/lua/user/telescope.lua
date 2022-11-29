@@ -5,6 +5,7 @@ end
 
 local builtin = require("telescope.builtin")
 local actions = require "telescope.actions"
+local fb_actions = telescope.extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
@@ -79,25 +80,54 @@ telescope.setup {
     },
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
+    find_files = {
+      find_command = {
+        "fd",
+        "--type",
+        "f",
+        "-H",
+        "-E",
+        "node_modules",
+        "-E",
+        ".git",
+        "-E",
+        ".venv",
+        "-I",
+      }
+    }
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
+    file_browser = {
+      hidden = true,
+      respect_gitignore = true,
+      hijack_netrw = true,
+      mapping = {
+        ["i"] = {
+          ["<A-t>"] = fb_actions.change_cwd,
+          ["<C-t>"] = actions.select_tab,
+        },
+      },
+    },
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "ignore_case",
+    },
   },
 }
 
+telescope.load_extension("file_browser")
+telescope.load_extension("fzf")
+telescope.load_extension("project")
+telescope.load_extension("neoclip")
+
+vim.keymap.set('n', '<leader>fd', ':Telescope file_browser<CR>', {})
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>pp', ':Telescope project<CR>', {})
+vim.keymap.set('n', '<leader>nc', ':Telescope neoclip<CR>', {})
+vim.keymap.set('n', '<leader>fm', ':Telescope<CR>', {})
 
