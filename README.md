@@ -28,7 +28,7 @@ npm i -g vscode-langservers-extracted
 
 ### Go
 go install github.com/nametake/golangci-lint-langserver@latest
-go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+&& go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
 ### Graphql
 npm install -g graphql-language-service-cli
