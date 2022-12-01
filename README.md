@@ -1,5 +1,8 @@
 # neovim-configs
 
+## Config
+You need to copy nvim folder under .config in your home directory.
+
 ## LSP
 
 ### Ansible
