@@ -51,7 +51,7 @@ keymap("n", "<leader>gc", ":LazyGitCurrentFile<CR>", opts)
 keymap("n", "<leader>ti", ":!terraform init<CR>", opts)
 keymap("n", "<leader>tv", ":!terraform validate<CR>", opts)
 keymap("n", "<leader>tp", ":!terraform plan<CR>", opts)
-keymap("n", "<leader>taa", ":!terraform apply -auto-approve<CR>", opts)
+keymap("n", "<leader>taa", ":!terraform apply<CR>", opts)
 
 -- Insert --
 -- Shift-Tab to reverse tab
