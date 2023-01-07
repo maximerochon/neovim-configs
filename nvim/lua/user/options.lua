@@ -1,8 +1,5 @@
 vim.opt.encoding = "UTF-8"
 vim.opt.guicursor = ""
---vim.opt.list = true
---vim.opt.listchars:append("space:⋅")
---vim.opt.listchars:append("eol:↴")
 vim.opt.backup = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cmdheight = 2

@@ -18,5 +18,6 @@ require('user/telescope')
 require('user/terraform')
 require('user/treesitter')
 require('user/scrollbar')
+require('user/neoclip')
 require('user/whichkey')
 
