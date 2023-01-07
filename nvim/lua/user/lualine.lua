@@ -26,8 +26,8 @@ lualine.setup({
             },
         },
         lualine_x = {},
-        lualine_y = {},
-        lualine_z = { "fileformat", "filetype" },
+        lualine_y = { "encoding", "fileformat" },
+        lualine_z = { "filetype" },
     },
     inactive_sections = {
         lualine_a = {},
