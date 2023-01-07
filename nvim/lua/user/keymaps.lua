@@ -59,12 +59,14 @@ keymap("i", "<S-Tab>", "<C-d>", opts)
 
 -- Visual --
 -- Stay in indent mode
+keymap("v", "<S-Tab>", "<gv", opts)
+keymap("v", "<Tab>", ">gv", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-Down>", ":m .+1<CR>==", opts)
-keymap("v", "<A-Up>", ":m .-2<CR>==", opts)
+keymap("v", "<A-Up>", ":move '<-2<CR>gv-gv", opts)
+keymap("v", "<A-Down>", ":move '>1+1<CR>gv-gv", opts)
 
 -- Visual Block --
 -- Move text up and down
