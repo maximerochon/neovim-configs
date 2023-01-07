@@ -1,6 +1,6 @@
-local ok, surround = pcall(require, "surround")
+local ok, surround = pcall(require, "nvim-surround")
 
 if ok then
-    surround.setup({ mapping_style = "sandwich" })
+    surround.setup({})
 end
 

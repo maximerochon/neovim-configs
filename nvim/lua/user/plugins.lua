@@ -102,8 +102,8 @@ return packer.startup(function(use)
     -- Comment
     use("numToStr/Comment.nvim")
 
-    -- surrond
-    use("ur4ltz/surround.nvim")
+    -- surround
+    use("kylechui/nvim-surround")
 
     -- Kitty Conf Highlighting
     use("fladson/vim-kitty")
