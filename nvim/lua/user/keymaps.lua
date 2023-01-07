@@ -53,6 +53,9 @@ keymap("n", "<leader>tv", ":!terraform validate<CR>", opts)
 keymap("n", "<leader>tp", ":!terraform plan<CR>", opts)
 keymap("n", "<leader>taa", ":!terraform apply<CR>", opts)
 
+-- Markdown preview
+keymap("n", "<leader>mp", "<CMD>MarkdownPreview<CR>", opts)
+
 -- Insert --
 -- Shift-Tab to reverse tab
 keymap("i", "<S-Tab>", "<C-d>", opts)

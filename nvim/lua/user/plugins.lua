@@ -112,25 +112,30 @@ return packer.startup(function(use)
     use("tpope/vim-sleuth")
 
     -- Blank line
-    use "lukas-reineke/indent-blankline.nvim"
+    use("lukas-reineke/indent-blankline.nvim")
 
     -- Emmet
-    use "mattn/emmet-vim"
+    use("mattn/emmet-vim")
 
     -- Markdown
-    use "iamcco/markdown-preview.nvim"
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    })
 
     -- Terraform
-    use "hashivim/vim-terraform"
+    use("hashivim/vim-terraform")
 
     -- scrollbar
-    use "petertriho/nvim-scrollbar"
+    use("petertriho/nvim-scrollbar")
 
     -- Colorscheme
-    use "folke/tokyonight.nvim"
+    use("folke/tokyonight.nvim")
 
     -- Whichkey
-    use "folke/which-key.nvim"
+    use("folke/which-key.nvim")
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

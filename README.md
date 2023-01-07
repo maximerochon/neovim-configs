@@ -63,3 +63,8 @@ npm install -g typescript typescript-language-server
 ### Vue
 npm install -g vls
 
+## Markdown preview
+```
+:call mkdp#util#install()
+```
+
