@@ -69,7 +69,7 @@ keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
 keymap("v", "<A-Up>", ":move '<-2<CR>gv-gv", opts)
-keymap("v", "<A-Down>", ":move '>1+1<CR>gv-gv", opts)
+keymap("v", "<A-Down>", ":move '>+1<CR>gv-gv", opts)
 
 -- Visual Block --
 -- Move text up and down
