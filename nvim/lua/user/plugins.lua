@@ -89,7 +89,6 @@ return packer.startup(function(use)
 
     -- lualine
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-
     -- Terminal
     use("numToStr/Fterm.nvim")
 
@@ -133,6 +132,13 @@ return packer.startup(function(use)
 
     -- Colorscheme
     use("folke/tokyonight.nvim")
+
+    -- DAP
+    use("mfussenegger/nvim-dap")
+    use("theHamsta/nvim-dap-virtual-text")
+    use("rcarriga/nvim-dap-ui")
+    use("nvim-telescope/telescope-dap.nvim")
+    use("mfussenegger/nvim-dap-python")
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
